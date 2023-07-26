@@ -7,7 +7,7 @@ from scoreboard import Scoreboard
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.title("Turtle Crossing Game")
-screen.tracer(0)
+screen.tracer(0) # turn off the tracer.
 
 player = Player() 
 car_manager = CarManager()
