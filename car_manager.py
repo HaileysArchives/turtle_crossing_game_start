@@ -14,13 +14,16 @@ class CarManager:
         self.INCREASE_SPEED = 0
 
     def create_cars(self):
-        new_car = Turtle()
-        new_car.color(random.choice(COLORS))
-        new_car.shape("square")
-        new_car.shapesize(stretch_wid=1, stretch_len=2)
-        new_car.penup()
-        new_car.goto(random.choice(STARTING_POSITIONS))
-        self.all_cars.append(new_car)    
+        # How to reduce the number of cars?
+        random_chance = random.randint(1, 6)
+        if random_chance == 1:  # 기본적으로 while 루프가 6회 실행될 때마다 새 자동차가 생성된다. 
+            new_car = Turtle()
+            new_car.color(random.choice(COLORS))
+            new_car.shape("square")
+            new_car.shapesize(stretch_wid=1, stretch_len=2)
+            new_car.penup()
+            new_car.goto(random.choice(STARTING_POSITIONS))
+            self.all_cars.append(new_car)    
     
     def move(self):
         for new_car in self.all_cars:

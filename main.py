@@ -7,7 +7,7 @@ from scoreboard import Scoreboard
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.title("Turtle Crossing Game")
-screen.tracer(0) # turn off the tracer.
+screen.tracer(0) # turn off the tracer. 
 
 player = Player() 
 car_manager = CarManager()
@@ -20,7 +20,7 @@ screen.onkey(player.go_down, "Down")
 game_is_on = True
 
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(0.1) # 화면이 0.1초마다 업데이트된다
     screen.update()
 
     car_manager.create_cars()
